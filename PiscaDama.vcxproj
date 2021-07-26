@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CB73F1E4-DA98-4A5A-ACA7-0BED43B7738F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>E:\home\Dropbox\repos\cppcodes\PiscaDama\include;$(IncludePath)</IncludePath>
+    <LibraryPath>E:\home\Dropbox\repos\cppcodes\PiscaDama\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>.\lib\x86</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="EyeXHost.cpp" />
+    <ClCompile Include="Peca.cpp" />
+    <ClCompile Include="PiscaDama.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Tabuleiro.cpp" />
+    <ClCompile Include="TabuleiroWindow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Constantes.h" />
+    <ClInclude Include="EyeXHost.h" />
+    <ClInclude Include="include\eyex-cpp\APIException.hpp" />
+    <ClInclude Include="include\eyex-cpp\AsyncData.hpp" />
+    <ClInclude Include="include\eyex-cpp\Callbacks.hpp" />
+    <ClInclude Include="include\eyex-cpp\EyeX.hpp" />
+    <ClInclude Include="include\eyex-cpp\HandleWrapper.hpp" />
+    <ClInclude Include="include\eyex-cpp\InteractionAgentBase.hpp" />
+    <ClInclude Include="include\eyex-cpp\InteractionBehavior.hpp" />
+    <ClInclude Include="include\eyex-cpp\InteractionBounds.hpp" />
+    <ClInclude Include="include\eyex-cpp\InteractionCommand.hpp" />
+    <ClInclude Include="include\eyex-cpp\InteractionContext.hpp" />
+    <ClInclude Include="include\eyex-cpp\InteractionEvent.hpp" />
+    <ClInclude Include="include\eyex-cpp\InteractionMask.hpp" />
+    <ClInclude Include="include\eyex-cpp\InteractionNotification.hpp" />
+    <ClInclude Include="include\eyex-cpp\InteractionObject.hpp" />
+    <ClInclude Include="include\eyex-cpp\InteractionQuery.hpp" />
+    <ClInclude Include="include\eyex-cpp\InteractionSnapshot.hpp" />
+    <ClInclude Include="include\eyex-cpp\InteractionSystem.hpp" />
+    <ClInclude Include="include\eyex-cpp\Interactor.hpp" />
+    <ClInclude Include="include\eyex-cpp\Property.hpp" />
+    <ClInclude Include="include\eyex-cpp\PropertyBag.hpp" />
+    <ClInclude Include="include\eyex-cpp\PropertyValueResolver.hpp" />
+    <ClInclude Include="include\eyex-cpp\StateBag.hpp" />
+    <ClInclude Include="include\eyex\EyeX.h" />
+    <ClInclude Include="include\eyex\EyeXActions.h" />
+    <ClInclude Include="include\eyex\EyeXAsyncData.h" />
+    <ClInclude Include="include\eyex\EyeXBehavior.h" />
+    <ClInclude Include="include\eyex\EyeXBounds.h" />
+    <ClInclude Include="include\eyex\EyeXClientTypes.h" />
+    <ClInclude Include="include\eyex\EyeXCommand.h" />
+    <ClInclude Include="include\eyex\EyeXContext.h" />
+    <ClInclude Include="include\eyex\EyeXEvent.h" />
+    <ClInclude Include="include\eyex\EyeXFrameworkTypes.h" />
+    <ClInclude Include="include\eyex\EyeXInteractor.h" />
+    <ClInclude Include="include\eyex\EyeXInternalLiterals.h" />
+    <ClInclude Include="include\eyex\EyeXInternalTypes.h" />
+    <ClInclude Include="include\eyex\EyeXLiterals.h" />
+    <ClInclude Include="include\eyex\EyeXMacros.h" />
+    <ClInclude Include="include\eyex\EyeXNotification.h" />
+    <ClInclude Include="include\eyex\EyeXObject.h" />
+    <ClInclude Include="include\eyex\EyeXProperty.h" />
+    <ClInclude Include="include\eyex\EyeXQuery.h" />
+    <ClInclude Include="include\eyex\EyeXSnapshot.h" />
+    <ClInclude Include="include\eyex\EyeXStates.h" />
+    <ClInclude Include="include\eyex\EyeXSystem.h" />
+    <ClInclude Include="include\eyex\EyeXUtils.h" />
+    <ClInclude Include="Observer.h" />
+    <ClInclude Include="Peca.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Tabuleiro.h" />
+    <ClInclude Include="TabuleiroWindow.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="include\eyex-cpp\AsyncData.inl" />
+    <None Include="include\eyex-cpp\HandleWrapper.inl" />
+    <None Include="include\eyex-cpp\InteractionAgentBase.inl" />
+    <None Include="include\eyex-cpp\InteractionBehavior.inl" />
+    <None Include="include\eyex-cpp\InteractionBounds.inl" />
+    <None Include="include\eyex-cpp\InteractionCommand.inl" />
+    <None Include="include\eyex-cpp\InteractionContext.inl" />
+    <None Include="include\eyex-cpp\InteractionEvent.inl" />
+    <None Include="include\eyex-cpp\InteractionMask.inl" />
+    <None Include="include\eyex-cpp\InteractionNotification.inl" />
+    <None Include="include\eyex-cpp\InteractionObject.inl" />
+    <None Include="include\eyex-cpp\InteractionQuery.inl" />
+    <None Include="include\eyex-cpp\InteractionSnapshot.inl" />
+    <None Include="include\eyex-cpp\InteractionSystem.inl" />
+    <None Include="include\eyex-cpp\Interactor.inl" />
+    <None Include="include\eyex-cpp\Property.inl" />
+    <None Include="include\eyex-cpp\PropertyBag.inl" />
+    <None Include="include\eyex-cpp\PropertyValueResolver.inl" />
+    <None Include="include\eyex-cpp\StateBag.inl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ActivatableBoardGame.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
